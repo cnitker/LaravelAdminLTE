@@ -24,7 +24,11 @@ class DemoController extends Controller
 //
 ////        echo $res->getStatusCode();
 //        echo $res->getBody();
+        abort();
 
+        $app =app();
+        echo $app->publicPath();
+        die();
         $response = \Requests::get('http://www.baidu.com');
 
         return $response->body;
